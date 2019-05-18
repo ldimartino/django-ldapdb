@@ -87,6 +87,8 @@ class UserFactory(factory.django.DjangoModelFactory):
 class BaseTestCase(TestCase):
     directory = {}
 
+    databases = ['default', 'ldap']
+
     @classmethod
     def setUpClass(cls):
         super(BaseTestCase, cls).setUpClass()
